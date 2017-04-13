@@ -3,7 +3,7 @@ $(document).ready(function(){
   var quote;
   var author;
   function getQuote(){
-    var url="api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=jQuery1910567528349808494_1492065273178&_=1492065273179";
+    var url="http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=";
     $.getJSON(url, function(data){
       tweetThis = data.quoteText + " By - " + data.quoteAuthor;
       $(".quote-text").html('"'+data.quoteText+'"');
